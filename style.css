@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: sans-serif;
+    height:100vh;
+}
+:any-link{
+    text-decoration: none
+}
+ul{
+    list-style: none
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-inline:auto;
+    padding: 20px;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li {
+    margin-left: 14px; 
+}
+.container{
+    width: 300px;
+    height: 200px;
+    background-color: red;
+    margin: calc(50vh - 50%) auto;
+}
