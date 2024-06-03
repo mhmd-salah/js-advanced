@@ -1,0 +1,131 @@
+==========[ console API ]========== 
+-----> time & timeEnd <-----
+console.time("alert")
+alert("hello")
+console.timeEnd("alert")
+----------------------------
+
+-----> groub <-----
+console.group()
+console.log("1")
+console.log("2")
+console.log( "3" );
+console.groupCollapsed()
+console.log("hello")
+console.groupCollapsed()
+console.log("hello")
+console.groupEnd();
+
+  The group() method starts a message group.
+  The groupCollapsed() method starts a collapsed message group.
+  The groupEnd() ends a message group.
+-------------------
+
+-------> assert <------
+console.assert( 11 == 10, "not equal" );
+console.assert(expression, message)
+-------------------------------------
+
+---------- count ---------
+--countReset()
+for ( let i = 0; i < 10; i++ )
+{
+  console.count("loop number : ")
+}
+  The count() method counts the number of times console.count() is called.
+  The count() method this number to the console.
+-------------------------------------
+
+-------- log --------
+console.log(array)
+The log() method writes (logs) a message to the console.
+---------------------
+
+--------- warn --------
+console.warn("warning")
+The warn() method writes a warning to the console.
+-----------------------
+
+-----------info------------
+console.info(message)
+The info() method writes a message to the console.
+---------------------------
+
+----------table---------
+console.table(["mohamed","salah","eman","ahmed"])
+
+let me = [
+  {
+    name: "mohamed",
+    age:20
+  },
+  {
+    name: "salah",
+    age:40
+  }
+];
+console.table(me,["name"])
+
+The table() method writes a table to the console.
+------------------------
+
+---------error-----------
+console.error("this error")
+The error() method writes an error message to the console.
+-------------------------
+
+--------trace---------
+function myFunction() {
+  myOtherFunction();
+}
+
+function myOtherFunction() {
+  console.trace();
+}
+
+The trace() method displays a trace that show how the code ended up at a certain point.
+----------------------
+
+----------dir---------
+--dirxml
+console.dir(document.location)
+console.dir(document.body)
+The console.dir() static method displays a list of the properties of the specified JavaScript object. In browser consoles, the output is presented as a hierarchical listing with disclosure triangles that let you see the contents of child objects.
+----------------------
+
+===========================================================
+
+======================= Data Types ========================
+
+-----Getting object type by constructor name
+console.log(object.prototype.toString.call(1))
+console.log(object.prototype.toString.call([]))
+console.log(object.prototype.toString.call("s"))
+-----
+
+-----------Strings----------------
+var hello = "Hello";
+var world = 'world';
+var helloW = `Hello World`; // ES2015 / ES6
+
+Strings can be created from other types using the String() function.
+var intString = String(32); // "32"
+var booleanString = String(true); // "true"
+var nullString = String(null); // "null"
+
+Or, toString() can be used to convert Numbers, Booleans or Objects to Strings.
+var intString = (5232).toString(); // "5232"
+var booleanString = (false).toString(); // "false"
+var objString = ({}).toString(); // "[object Object]"
+
+Strings also can be created by using String.fromCharCode method.
+String.fromCharCode(104,101,108,108,111) //"hello"
+
+to reverse String
+
+str.split('').reverse().join('');
+String.prototype.split()
+
+spread operator
+ [...String(str)].reverse().join('');
+----------------------------------

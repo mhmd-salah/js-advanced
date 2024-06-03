@@ -6,6 +6,11 @@
 body{
     font-family: sans-serif;
     height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 :any-link{
     text-decoration: none
@@ -13,23 +18,53 @@ body{
 ul{
     list-style: none
 }
+.container{
+    width: 350px;
+    height: 200px;
+    border-radius: 4px;
+    background-color: #f6f7f8;
+    display: grid;
+    place-content: center;
+    font-size: 30px;
+    font-weight: 900;
+    color: #999;
+}
+.anim{
+    background-image: linear-gradient(
+        to right,
+        #f6f7f8 0%,
+        #edeef0 10%,
+        #f6f7f8 20%,
+        #f6f7f8 100%
+    );
+    background-size: 200% 100%;
+    background-position: 50% 0;
+    animation: eff 1s linear infinite;
+}
 
-header{
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin-inline:auto;
-    padding: 20px;
+@keyframes eff {
+    0%{
+        background-position: 50% 0;
+    }100%{
+        background-position: -150% 0 ;
+    }
 }
-header nav ul {
-    display: flex;
-}
-header nav ul li {
-    margin-left: 14px; 
+span{
+    height: 10px;
+    width: 2px;
+    background-color: red;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 .container{
-    width: 300px;
-    height: 200px;
-    background-color: red;
-    margin: calc(50vh - 50%) auto;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    display: grid;
+    place-content: center;
+}
+.container button{
+    padding: 5px 9px;
+    font-size: 19px;
 }
